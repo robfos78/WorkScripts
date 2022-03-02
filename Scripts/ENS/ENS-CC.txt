@@ -1,0 +1,8 @@
+Source, Destination
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/setupEP.exe, C:\Windows\Temp\ENS-ATM\setupEP.exe
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/msxml6.msi, C:\Windows\Temp\ENS-ATM\msxml6.msi
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/msxml6_x64.msi, C:\Windows\Temp\ENS-ATM\msxml6_x64.msi
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/EPDeploy.xml, C:\Windows\Temp\ENS-ATM\EPDeploy.xml
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/EpInstallStrings.zip, C:\Windows\Temp\ENS-ATM\EpInstallStrings.zip
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/Endpoint%20Security%20Platform%2010.7.0%20Build%203255%20Package%20%232%20(AAA-LICENSED-RELEASE-MAIN).Zip, C:\Windows\Temp\ENS-ATM\Endpoint Security Platform 10.7.0 Build 3255 Package #2 (AAA-LICENSED-RELEASE-MAIN).Zip
+http://distrepo.550regency.local/unc/Current/ENSATMDL1070/Install/0000/Threat%20Prevention%2010.7.0%20Build%203299%20Package%20%2319%20(AAA-LICENSED-RELEASE-UPDATE%2011).Zip, C:\Windows\Temp\ENS-ATM\Threat Prevention 10.7.0 Build 3299 Package #19 (AAA-LICENSED-RELEASE-UPDATE 11).Zip
