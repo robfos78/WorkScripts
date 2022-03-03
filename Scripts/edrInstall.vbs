@@ -9,7 +9,7 @@ Dim shell_obj : set shell_obj = CreateObject("WScript.Shell")
 Dim URL : URL = "http://remediation.lab.local/mcafee/EDR.zip"
 Dim FILENAME : FILENAME =  "C:\Windows\temp\EDR.zip"
 Dim TargetDir : TargetDir = Left(FILENAME, InstrRev(FILENAME,".") - 1)
-Dim RUNCMD : "C:\Windows\temp\EDR\MVEDRSetup_x64.exe /install /quiet" 
+Dim RUNCMD : RUNCMD = "C:\Windows\temp\EDR\MVEDRSetup_x64.exe /install /quiet" 
 'Download the ENS pacakage
 http_obj.open "GET", URL, False
 http_obj.send
