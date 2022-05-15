@@ -6,10 +6,10 @@ Dim http_obj : set http_obj = CreateObject("Microsoft.XMLHTTP")
 Dim stream_obj : set stream_obj = CreateObject("ADODB.Stream")
 Dim shell_obj : set shell_obj = CreateObject("WScript.Shell")
 'Set global variables
-Dim URL : URL = "http://remediation.lab.local/mcafee/EDR.zip"
-Dim FILENAME : FILENAME =  "C:\Windows\temp\EDR.zip"
+Dim URL : URL = "http://remediation.lab.local/mcafee/testps.zip"
+Dim FILENAME : FILENAME =  "C:\Windows\temp\testps.zip"
 Dim TargetDir : TargetDir = Left(FILENAME, InstrRev(FILENAME,".") - 1)
-Dim RUNCMD : RUNCMD = "C:\Windows\temp\EDR\MVEDRSetup_x64.exe /install /quiet" 
+Dim RUNCMD : RUNCMD = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File  C:\Windows\temp\testps\testps.ps1"
 'Download the ENS pacakage
 http_obj.open "GET", URL, False
 http_obj.send
