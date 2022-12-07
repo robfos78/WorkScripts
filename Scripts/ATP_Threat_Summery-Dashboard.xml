@@ -1,0 +1,26 @@
+<dashboard id="1">
+  <name>ATP Threat Summery</name>
+  <filteringEnabled>false</filteringEnabled>
+  <monitor>
+    <uid>4</uid>
+    <width>1</width>
+    <height>1</height>
+    <x>0</x>
+    <y>0</y>
+    <refreshInterval>5</refreshInterval>
+    <refreshIntervalUnit>MIN</refreshIntervalUnit>
+    <customConfigOptions>dashboardElement:config?database=</customConfigOptions>
+    <filteringEnabled>true</filteringEnabled>
+    <customExport factory="core.queryFactory">
+      <query id="2">
+        <dictionary id="3"/>
+        <name>ENS Detection Report</name>
+        <description></description>
+        <target>EPOEvents</target>
+        <table-uri>query:table?orion.table.columns=EPOEvents.DetectedUTC%3AEPOEvents.TargetHostName%3AEPOEvents.ThreatName%3AEPOEvents.AnalyzerDetectionMethod%3AEPOEvents.AnalyzerHostName%3AEPOEvents.ThreatActionTaken%3AEPOEvents.SourceProcessName&amp;orion.table.order=az&amp;orion.table.order.by=EPOEvents.DetectedUTC%3AEPOEvents.TargetHostName%3AEPOEvents.ThreatName%3AEPOEvents.AnalyzerDetectionMethod%3AEPOEvents.AnalyzerHostName%3AEPOEvents.ThreatActionTaken%3AEPOEvents.SourceProcessName</table-uri>
+        <condition-uri>query:condition?orion.condition.sexp=%28+where+%28+and+%28+ne+EPOEvents.AnalyzerDetectionMethod+%22On-Execute+Scan%22+%29+%28+not_isBlank+EPOEvents.AnalyzerDetectionMethod+%29+%29+%29</condition-uri>
+        <summary-uri>query:summary?orion.sum.query=true&amp;orion.query.type=pie.pie&amp;show.percentage=false&amp;orion.sum.group.by=EPOEvents.AnalyzerDetectionMethod&amp;orion.sum.order=desc&amp;orion.sum.limit.count=360&amp;orion.sum.aggregation=count&amp;orion.sum.aggregation.showTotal=true</summary-uri>
+      </query>
+    </customExport>
+  </monitor>
+</dashboard>

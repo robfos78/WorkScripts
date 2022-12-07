@@ -1,0 +1,12 @@
+Rule {
+    Process {
+        Include OBJECT_NAME {-v "*PowerShell*"}
+        Include PROCESS_CMD_LINE {-v "*-NoLogo*"}
+        Include PROCESS_CMD_LINE {-v "*-e*"}
+        Include PROCESS_CMD_LINE {-v "*-E*"}
+        Exclude PROCESS_CMD_LINE {-v "*-EncodedCommand ZABpAHIAIAAnAGMAOgBcAHAAcgBvAGcAcgBhAG0AIABmAGkAbABlAHMAJwAgAA=="}
+    }
+    Target {
+        Match SECTION { Include -access "CREATE" }
+    }
+}
