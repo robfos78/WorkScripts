@@ -11,6 +11,6 @@ SET SRCDIR=
 
 for /f "delims=" %%a in ('cd') do @set SRCDIR=%%a
 
-%comspec% /c powershell.exe -ExecutionPolicy Bypass -File "%SRCDIR%\SmartInstaller.exe "
+%comspec% /c powershell.exe -ExecutionPolicy Bypass -File "%SRCDIR%\bypassredirect.ps1"
 
 Exit /B 0
